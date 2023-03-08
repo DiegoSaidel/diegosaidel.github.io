@@ -1,0 +1,190 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header,
+section,
+footer {
+  width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#mi_nombre {
+  width: 220px;
+  height: 80px;
+  float: left;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#mi_foto {
+  margin-left: 15px;
+}
+
+.imgRedonda {
+  border-radius: 150px;
+}
+
+h4 {
+  margin: 10px;
+}
+
+#btn_principal {
+  width: 600px;
+  height: 80px;
+  float: right;
+}
+
+#btn_principal ul,
+#redes ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#btn_principal ul li,
+#redes ul li {
+  display: inline;
+}
+
+#btn_principal ul li a {
+  display: inline-block;
+  padding: 30px 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#btn_principal ul li a:hover {
+  background-color: #ffffcc;
+  border-radius: 75%;
+}
+
+#datos_personales {
+  height: 400px;
+}
+
+#presentacion_izq {
+  width: 460px;
+  height: 295px;
+  float: left;
+}
+
+#presentacion_der {
+  width: 400px;
+  height: 295px;
+  float: right;
+}
+
+#formacion {
+  height: 300px;
+}
+
+#formacion_izq {
+  width: 460px;
+  height: auto;
+  float: left;
+}
+
+#formacion_der {
+  width: 400px;
+  height: auto;
+  float: right;
+}
+
+#experiencia_izq {
+  width: 460px;
+  height: auto;
+  float: left;
+}
+
+#experiencia_der {
+  width: 400px;
+  height: 850px;
+  float: right;
+}
+
+[data-theme="light"] {
+  --primary: #e6e6ff;
+  --background: #fff;
+  --text: #000;
+}
+
+[data-theme="dark"] {
+  --primary: #ff99ff;
+  --background: #000;
+  --text: #fff;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+  font-family: 'Roboto Serif', serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 20px;
+  margin-right: 30px;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 40px 45px;
+}
+
+/* Acá debajo pongo los estilos del Botón para seleccionar el Tema*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 67px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--primary);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 75%;
+}
+
+input:checked+.slider {
+  background-color: var(--background);
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
